@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="224dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="228dp"
+        android:max="5"
+        android:progress="0"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/text4score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="92dp"
+        android:layout_toEndOf="@+id/backBtn"
+        android:text="4: perceptible, but not annoying"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/text2score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="151dp"
+        android:layout_toEndOf="@+id/backBtn"
+        android:text="2: annoying"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/text5score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="65dp"
+        android:layout_toEndOf="@+id/backBtn"
+        android:text="5: imperceptible"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/text3score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="123dp"
+        android:layout_toEndOf="@+id/backBtn"
+        android:text="3: slightly annoying"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/text1score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSubmit"
+        android:layout_toEndOf="@+id/backBtn"
+        android:text="1: very annoying"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/text2score"
+        android:layout_toEndOf="@+id/textEvaluation"
+        android:text="Submit"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textEvaluation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="89dp"
+        android:fontFamily="serif"
+        android:text="Evaluation"
+        android:textAllCaps="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/surfaceviewhome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="top"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="124dp"
+        android:layout_height="64dp"
+        android:layout_centerInParent="true"
+        android:baselineAligned="false"
+        android:text="Start"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/forwardBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:drawable/ic_media_next"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="99dp"
+        android:fontFamily="serif"
+        android:text="Point Cloud Experiment"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textSize="30sp"
+        android:typeface="normal" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:drawable/ic_media_previous"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/chooseNewbtn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Next"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/maxSeekbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/seekBar"
+        android:layout_below="@+id/seekBar"
+        android:layout_marginTop="-228dp"
+        android:fontFamily="serif"
+        android:text="5"
+        android:textColor="@android:color/darker_gray"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/progressSeekbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/seekBar"
+        android:layout_below="@+id/seekBar"
+        android:layout_marginTop="-228dp"
+        android:fontFamily="serif"
+        android:text="1"
+        android:textColor="@android:color/darker_gray"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/endText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="99dp"
+        android:fontFamily="serif"
+        android:text="Thank You for participating !"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textSize="24sp"
+        android:typeface="normal"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textBatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/textEvaluation"
+        android:text="Batch:"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/buttonStart"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:inputType="numberSigned" />
+
+    <Button
+        android:id="@+id/btnBatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSubmit"
+        android:layout_centerHorizontal="true"
+        android:text="Submit" />
+
+</RelativeLayout>

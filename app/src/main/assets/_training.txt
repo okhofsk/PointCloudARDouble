@@ -1,0 +1,3 @@
+statue.ply statue_graph_0_1.ply
+statue.ply statue.ply
+statue.ply statue_octree_0_4.ply
