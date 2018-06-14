@@ -143,6 +143,10 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
 
     float startTime;
 
+    // -change size of points with this variable-
+    float sizePoints;
+
+
     int nbrPC;
     int listsize;
     int count_scores;
@@ -274,6 +278,7 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
         count_scores = 0;
         batchNumber = 0;
         switch_on = false;
+        sizePoints = 5.0f;
 
         scores = new int[listsize];
 
@@ -790,7 +795,7 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
 
             // -draw point clouds-
             pointClass.update(storedPoints, coloredPoints);
-            pointClass.draw(viewmtx, projmtx);
+            pointClass.draw(viewmtx, projmtx, sizePoints);
 
         } catch (Throwable t) {
             // Avoid crashing the application due to unhandled exceptions.

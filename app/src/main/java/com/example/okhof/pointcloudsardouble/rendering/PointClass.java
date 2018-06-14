@@ -123,13 +123,8 @@ public class PointClass {
      * @param cameraPerspective the camera projection matrix for this frame, typically from {@link
      *     com.google.ar.core.Camera#getProjectionMatrix(float[], int, float, float)}.
      */
-    public void draw(float[] cameraView, float[] cameraPerspective) {
+    public void draw(float[] cameraView, float[] cameraPerspective, float pointSize) {
         float[] modelViewProjection = new float[16];
-        /*float[] quadmat = {0.4f, 0.0f, 0.0f, 0.0f,
-                0.0f, 0.9f, 0.0f, 0.0f,
-                0.0f, 0.0f, 1.0f, 0.0f,
-                0.0f, 0.0f, 0.0f,1.0f};
-        Matrix.multiplyMM(cameraPerspective, 0, cameraPerspective, 0, quadmat, 0);*/
         Matrix.multiplyMM(modelViewProjection, 0, cameraPerspective, 0, cameraView, 0);
 
         com.google.ar.core.examples.java.helloar.rendering.ShaderUtil.checkGLError(TAG, "Before draw");
@@ -141,7 +136,7 @@ public class PointClass {
         GLES20.glVertexAttribPointer(colorPointer, 4, GLES20.GL_FLOAT, false, BYTES_PER_POINT, numPoints * BYTES_PER_POINT);
         GLES20.glVertexAttribPointer(positionAttribute, 4, GLES20.GL_FLOAT, false, BYTES_PER_POINT, 0);
         GLES20.glUniformMatrix4fv(modelViewProjectionUniform, 1, false, modelViewProjection, 0);
-        GLES20.glUniform1f(pointSizeUniform, 5.0f);
+        GLES20.glUniform1f(pointSizeUniform, pointSize);
 
 
         GLES20.glDrawArrays(GLES20.GL_POINTS, 0, numPoints);
